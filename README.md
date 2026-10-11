@@ -18,6 +18,9 @@ The PAW framework inverts the typical AI-developer dynamic. It configures the AI
 * **[PAW Beginner's Guide](docs/paw_beginners_guide.md)**
   A practical, step-by-step companion guide for absolute beginners. It walks you through choosing an IDE, setting up Git, managing AI token costs, and starting your first session.
 
+* **[Thesis Notes](docs/thesis/)**
+  Work-in-progress planning for turning PAW into an enforced software tool and Master's thesis. Start with the [review & next steps](docs/thesis/review_and_next_steps_2026-10-10.md).
+
 ## Getting Started
 
 To use PAW, you do not need to install any external packages. The framework relies entirely on prompting your chosen AI coding assistant (such as those found in VS Code, Cursor, Windsurf, or Antigravity).

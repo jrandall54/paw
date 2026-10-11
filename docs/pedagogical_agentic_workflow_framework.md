@@ -37,7 +37,7 @@ PAW requires patience. It intentionally introduces friction into the development
 
 ## 3. The Problem We Are Solving
 
-Cognitive science identifies a phenomenon called the **illusion of competence** (Roediger & Karpicke, 2006). When you read a clear explanation or watch an AI generate perfectly formatted code, your brain easily processes the information. Because the material feels easy to read, you falsely assume it will be easy to retrieve and apply later. Passive exposure creates familiarity, not mastery.
+Cognitive science identifies a phenomenon called the **illusion of competence** (Koriat & Bjork, 2005). When you read a clear explanation or watch an AI generate perfectly formatted code, your brain easily processes the information. Because the material feels easy to read, you falsely assume it will be easy to retrieve and apply later. Passive exposure creates familiarity, not mastery.
 
 When you copy AI-generated code without active cognitive effort, you produce a project you cannot debug, extend, or explain independently. PAW breaks this illusion by requiring you to actively retrieve information, predict structures, and explain reasoning at every step of the development journey.
 
@@ -206,9 +206,9 @@ PAW is heavily grounded in educational psychology and cognitive science.
 | Principle | The Science | How PAW Uses It |
 | :--- | :--- | :--- |
 | **Retrieval Practice**<br>*(Roediger & Karpicke, 2006)* | Actively retrieving information from memory strengthens learning far more than passive re-reading. | The Pre-Quiz and Post-Quiz are the primary engines of your learning, forcing active recall. |
-| **Desirable Difficulties**<br>*(Bjork, 1994)* | Making learning slightly harder in the short term (the "generation effect") leads to better long-term retention. | The Prediction stage forces you to generate ideas before seeing the answer, cementing the concepts. |
+| **Desirable Difficulties**<br>*(Bjork, 1994)*<br>**Generation Effect**<br>*(Slamecka & Graf, 1978)* | Making learning slightly harder in the short term leads to better long-term retention. Generating an answer yourself, even a wrong one, is one such difficulty. | The Prediction stage forces you to generate ideas before seeing the answer, cementing the concepts. |
 | **Mastery Learning**<br>*(Bloom, 1968)* | Students learn best when achievement is fixed at a high standard, but the time allowed to reach it is flexible. | The loop's readiness gates ensure you never carry partial understanding forward into the next lesson. |
-| **Zone of Proximal Development**<br>*(Vygotsky, 1978)* | Learning happens in the zone between what you can do alone and what you cannot do at all. | The hint escalation system provides just enough scaffolding to keep you struggling productively. |
+| **Zone of Proximal Development & Scaffolding**<br>*(Vygotsky, 1978; Wood, Bruner & Ross, 1976)* | Learning happens in the zone between what you can do alone and what you cannot do at all. | The hint escalation system provides just enough scaffolding to keep you struggling productively. |
 | **Metacognition**<br>*(Flavell, 1979)* | Being aware of your own thought processes improves how effectively you learn. | Applied quiz questions force you to evaluate your own mental models. |
 
 ---
@@ -317,7 +317,7 @@ Are you ready to move on to Commit #5?
 
 ## Next Steps
 
-Ready to start? The companion document, **PAW Getting Started Guide**, will walk you through exactly how to set up your environment, initialize your repository, prompt the AI to generate your project-specific instructions, and begin your very first session. 
+Ready to start? The companion document, **[PAW Beginner's Guide](paw_beginners_guide.md)**, will walk you through exactly how to set up your environment, initialize your repository, prompt the AI to generate your project-specific instructions, and begin your very first session. 
 
 Happy learning.
 

@@ -37,7 +37,7 @@ There are three primary companies that build the models most commonly used in AI
 
 | Creator Company | Model Family | Key Coding Strengths |
 | :--- | :--- | :--- |
-| **Anthropic** | **Claude** | Known for exceptional reasoning, highly detailed natural explanations, and strict adherence to workflow rules (like your PAW instructions). |
+| **Anthropic** | **Claude** | Known for exceptional reasoning, highly detailed natural explanations, and good adherence to workflow rules (like your PAW instructions). |
 | **Google** | **Gemini** | Features massive "context windows" (the ability to read, analyze, and remember huge codebases all at once) and high-speed processing. |
 | **OpenAI** | **GPT** | Highly reliable, fast responses, and widely compatible with nearly all external developer tools and extensions. |
 
@@ -48,7 +48,7 @@ Within each model family, the creator companies offer different sizes and streng
 #### 1. Heavyweight Models
 These are the largest, most intelligent models available. They act as "senior architects."
 
-* **Examples:** Claude 3.5 Opus / Claude 3 Opus (Anthropic), Gemini 1.5 Pro (Google), GPT-4o / GPT-4 (OpenAI).
+* **Examples:** Claude Opus (Anthropic), Gemini Pro (Google), the flagship GPT model (OpenAI). *Model names change every few months, so check your tool's model picker for the current versions.*
 * **Strengths:** Exceptional reasoning, deep understanding of complex code, and excellent at high-level planning.
 * **Weaknesses:** Slower to generate responses and cost significantly more credits per message.
 * **Best Used For:** Creating your initial project roadmap, designing complex software architecture, or debugging a deeply confusing error.
@@ -56,7 +56,7 @@ These are the largest, most intelligent models available. They act as "senior ar
 #### 2. Speed & Efficiency Models
 These are smaller, highly optimized models. They act as "fast, responsive tutors."
 
-* **Examples:** Claude 3.5 Sonnet / Claude 3 Haiku (Anthropic), Gemini 1.5 Flash (Google), GPT-4o-mini (OpenAI).
+* **Examples:** Claude Sonnet / Claude Haiku (Anthropic), Gemini Flash (Google), the "mini" GPT models (OpenAI).
 * **Strengths:** Lightning-fast responses and very cheap to use (costs far fewer credits).
 * **Weaknesses:** Can occasionally struggle with massive, project-wide architectural overhauls without guidance.
 * **Best Used For:** Running the PAW Six-Stage Loop. Because you will be going back and forth with the AI constantly (answering quizzes, getting hints, generating code snippets), a faster model saves you time and prevents you from burning through your credit limits quickly.
@@ -102,10 +102,10 @@ An **IDE** (Integrated Development Environment) is simply the application where 
 
 | IDE | AI Agent Support | Cost | Best Suited For & Notes |
 |---|---|---|---|
-| **[Antigravity](https://deepmind.google/)** | Built-in Antigravity agent | Free / Pre-configured | **Agentic developer workspace.** An AI-first environment designed by Google DeepMind for proactive agentic pair programming, featuring multi-tool execution and structured implementation plans. |
+| **[Antigravity](https://antigravity.google/)** | Built-in Antigravity agent | Free / Pre-configured | **Agentic developer workspace.** An AI-first environment designed by Google DeepMind for proactive agentic pair programming, featuring multi-tool execution and structured implementation plans. |
 | **[VS Code](https://code.visualstudio.com/)** | GitHub Copilot, Cline, Continue, Roo Code | Free IDE (AI plugins have free/paid tiers) | **General-purpose coding.** Excellent for web development, scripting, games, and CLI tools. Extremely customizable. |
 | **[Cursor](https://www.cursor.com/)** | Built-in Composer agent | Free tier available (Paid plans for high usage) | **AI-first general development.** Highly recommended for beginners; the AI agent has deep access to files and handles multi-file edits very smoothly. |
-| **[Windsurf](https://codeium.com/windsurf)** | Built-in Cascade agent | Free tier available (Paid plans for high usage) | **AI-first general development.** Similar to Cursor, but excels at interactive terminal debugging and collaborative coding sessions with the agent. |
+| **[Windsurf](https://windsurf.com/)** | Built-in Cascade agent | Free tier available (Paid plans for high usage) | **AI-first general development.** Similar to Cursor, but excels at interactive terminal debugging and collaborative coding sessions with the agent. |
 | **[JetBrains PyCharm / IntelliJ (Community)](https://www.jetbrains.com/)** | JetBrains AI, GitHub Copilot | Free IDEs (AI requires separate subscription) | **Python and Java/Kotlin.** Best for heavy backend systems, Python automation scripts (PyCharm), or Java-based desktop/game development (IntelliJ). |
 | **[Android Studio](https://developer.android.com/studio)** | Built-in Gemini developer assistance | Free | **Android Mobile Apps.** Tailored specifically for building native Android applications. |
 | **[Xcode](https://developer.apple.com/xcode/)** | Swift Assist & Apple Developer tools | Free | **iOS/macOS Mobile Apps.** Required if you want to build native apps for Apple platforms (requires macOS). |
@@ -169,7 +169,7 @@ This is where you set up the actual code project. Because different apps require
 ### 6a: Ask Your Agent for Help
 Open the AI chat panel in your IDE. *(Tip: Look for a chat bubble icon in the left or right sidebar, or try pressing `Cmd+L` on Mac or `Ctrl+L` on Windows).*
 
-Ensure the agent is set to use a **Heavyweight model** (like Claude 3.5 Opus or GPT-4o), and tell it:
+Ensure the agent is set to use a **Heavyweight model** (like Claude Opus or Gemini Pro), and tell it:
 
 > "I want to start a new project. My idea is [your one-sentence idea]. I am a complete beginner with no prior coding knowledge. Can you help me choose a language and framework, and walk me through creating the project folder?"
 
@@ -188,7 +188,7 @@ This is the most critical file in a PAW project. It explicitly tells the AI **ho
 
 Tell your agent:
 
-> "I want to use the Pedagogical Agentic Workflow (PAW) for this project. I am going to give you the PAW framework rules. Please help me create a `.agent-instructions.md` file that adapts these rules to my specific project."
+> "I want to use the Pedagogical Agentic Workflow (PAW) for this project. I am going to give you the PAW framework rules. Please help me create an `AGENTS.md` file in the root of my project that adapts these rules to my specific project."
 
 Next, provide the agent with the text from the core **PAW Framework document**. If you do not want to copy and paste the entire body of text, most IDE chat interfaces provide simpler options:
 
@@ -198,6 +198,10 @@ Next, provide the agent with the text from the core **PAW Framework document**. 
 If these options are not available in your IDE, simply open the framework document, copy its entire contents, and paste it directly into the chat.
 
 The agent will read the rules, generate a project-specific instructions file, and save it in your project folder.
+
+> **Important: the file name matters.** AI tools only read instruction files with specific names. `AGENTS.md` is read by most tools (Cursor, Windsurf, Copilot, Codex, and others). **Claude Code** reads `CLAUDE.md` instead. If you use Claude Code, either name the file `CLAUDE.md` or create a `CLAUDE.md` containing the single line `@AGENTS.md`. If the file has the wrong name, the AI never sees your PAW rules and will simply write the code for you.
+
+> **A known limitation:** Even with the instructions file, AI agents can slowly drift away from the PAW rules during long sessions, and agentic IDEs may try to edit your files directly. If you notice the agent writing code into your files or skipping quizzes, remind it: *"Please follow the PAW rules in AGENTS.md. Do not edit my files; show me the code and I will type it."*
 
 ---
 
